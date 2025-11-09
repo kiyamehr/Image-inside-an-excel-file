@@ -16,6 +16,9 @@ for y in range(0, height, 10):
     for x in range(0, width, 10):
         r, g, b = pix[x, y]
 
+        # : -> means "start formatting"
+        # 02 -> means "make it at least 2 characters long, and if it’s shorter, pad with zeros"
+        # X -> means "convert the number to uppercase hexadecimal"
         hex_color = "{:02X}{:02X}{:02X}".format(r, g, b)
         fill = PatternFill(
             start_color="FF" + hex_color, end_color="FF" + hex_color, fill_type="solid"
